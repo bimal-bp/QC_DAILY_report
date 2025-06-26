@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Size Distribution Record</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .document-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .document-title h1 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .document-title h3 {
+            color: #7f8c8d;
+            margin-top: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #34495e;
+            color: white;
+        }
+        input[type="date"], input[type="text"], input[type="number"], select {
+            width: 90%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .signature-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .signature-box {
+            width: 45%;
+        }
+        .signature-line {
+            border-top: 1px solid #000;
+            margin-top: 50px;
+            width: 100%;
+        }
+        .action-buttons {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .print-btn {
+            padding: 10px 25px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .print-btn:hover {
+            background-color: #2980b9;
+        }
+        @media print {
+            .action-buttons {
+                display: none;
+            }
+            input, select {
+                border: none;
+                width: 100%;
+                -webkit-appearance: none;
+                appearance: none;
+            }
+            input:after {
+                content: attr(value);
+            }
+            select:after {
+                content: attr(value);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="document-title">
+        <h1>PARTICLE SIZE DISTRIBUTION RECORD</h1>
+        <h3>QC / Chemist Responsibility</h3>
+    </div>
+
+    <div class="header-section">
+        <div>
+            <label for="recordDate">Date: </label>
+            <input type="date" id="recordDate" name="recordDate">
+        </div>
+        <div>
+            <label for="shiftType">Shift: </label>
+            <select id="shiftType" name="shiftType">
+                <option value="">Select Shift</option>
+                <option value="Day">Day</option>
+                <option value="Night">Night</option>
+            </select>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>QC Chemist</th>
+                <th>Stage / Material</th>
+                <th>PSD D80 (µm)</th>
+                <th>PSD D90 (µm)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <select name="chemist_1">
+                        <option value="">Select Chemist</option>
+                        <option value="Mr. Saumiya Ranjan">Mr. Saumiya Ranjan</option>
+                        <option value="Mr. Suraj Pal">Mr. Suraj Pal</option>
+                        <option value="Mr. Rabindra Kumar Khatua">Mr. Rabindra Kumar Khatua</option>
+                        <option value="Mr. Kalla Satish">Mr. Kalla Satish</option>
+                    </select>
+                </td>
+                <td>SGX Raw</td>
+                <td><input type="number" step="0.01" name="d80_1" placeholder="Enter value"></td>
+                <td><input type="number" step="0.01" name="d90_1" placeholder="Enter value"></td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="chemist_2">
+                        <option value="">Select Chemist</option>
+                        <option value="Mr. Saumiya Ranjan">Mr. Saumiya Ranjan</option>
+                        <option value="Mr. Suraj Pal">Mr. Suraj Pal</option>
+                        <option value="Mr. Rabindra Kumar Khatua">Mr. Rabindra Kumar Khatua</option>
+                        <option value="Mr. Kalla Satish">Mr. Kalla Satish</option>
+                    </select>
+                </td>
+                <td>RH</td>
+                <td><input type="number" step="0.01" name="d80_2" placeholder="Enter value"></td>
+                <td><input type="number" step="0.01" name="d90_2" placeholder="Enter value"></td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="chemist_3">
+                        <option value="">Select Chemist</option>
+                        <option value="Mr. Saumiya Ranjan">Mr. Saumiya Ranjan</option>
+                        <option value="Mr. Suraj Pal">Mr. Suraj Pal</option>
+                        <option value="Mr. Rabindra Kumar Khatua">Mr. Rabindra Kumar Khatua</option>
+                        <option value="Mr. Kalla Satish">Mr. Kalla Satish</option>
+                    </select>
+                </td>
+                <td>OPC</td>
+                <td><input type="number" step="0.01" name="d80_3" placeholder="Enter value"></td>
+                <td><input type="number" step="0.01" name="d90_3" placeholder="Enter value"></td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="chemist_4">
+                        <option value="">Select Chemist</option>
+                        <option value="Mr. Saumiya Ranjan">Mr. Saumiya Ranjan</option>
+                        <option value="Mr. Suraj Pal">Mr. Suraj Pal</option>
+                        <option value="Mr. Rabindra Kumar Khatua">Mr. Rabindra Kumar Khatua</option>
+                        <option value="Mr. Kalla Satish">Mr. Kalla Satish</option>
+                    </select>
+                </td>
+                <td>Accelerator</td>
+                <td><input type="number" step="0.01" name="d80_4" placeholder="Enter value"></td>
+                <td><input type="number" step="0.01" name="d90_4" placeholder="Enter value"></td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="chemist_5">
+                        <option value="">Select Chemist</option>
+                        <option value="Mr. Saumiya Ranjan">Mr. Saumiya Ranjan</option>
+                        <option value="Mr. Suraj Pal">Mr. Suraj Pal</option>
+                        <option value="Mr. Rabindra Kumar Khatua">Mr. Rabindra Kumar Khatua</option>
+                        <option value="Mr. Kalla Satish">Mr. Kalla Satish</option>
+                    </select>
+                </td>
+                <td>Ground Mixing</td>
+                <td><input type="number" step="0.01" name="d80_5" placeholder="Enter value"></td>
+                <td><input type="number" step="0.01" name="d90_5" placeholder="Enter value"></td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="chemist_6">
+                        <option value="">Select Chemist</option>
+                        <option value="Mr. Saumiya Ranjan">Mr. Saumiya Ranjan</option>
+                        <option value="Mr. Suraj Pal">Mr. Suraj Pal</option>
+                        <option value="Mr. Rabindra Kumar Khatua">Mr. Rabindra Kumar Khatua</option>
+                        <option value="Mr. Kalla Satish">Mr. Kalla Satish</option>
+                    </select>
+                </td>
+                <td>Dryer Output</td>
+                <td><input type="number" step="0.01" name="d80_6" placeholder="Enter value"></td>
+                <td><input type="number" step="0.01" name="d90_6" placeholder="Enter value"></td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="chemist_7">
+                        <option value="">Select Chemist</option>
+                        <option value="Mr. Saumiya Ranjan">Mr. Saumiya Ranjan</option>
+                        <option value="Mr. Suraj Pal">Mr. Suraj Pal</option>
